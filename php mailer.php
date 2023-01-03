@@ -1,3 +1,4 @@
+//It is not working
 <?php 
 if($_POST){
 require("class.phpmailer.php");
