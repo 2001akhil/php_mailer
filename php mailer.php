@@ -1,14 +1,16 @@
-//It is not working
+//Not working
+//Author Rishi
+//comment author and tester:2001akhil
 <?php 
 if($_POST){
-require("class.phpmailer.php");
-$first_name = $_POST['first_name'];
-$email = $_POST['email'];
-$number = $_POST['number'];
-$fileName = $_POST['file_name'];
-$file_url = $_POST['file_url'];
-$word_count = $_POST['word_count'];
-$translate_from = $_POST['translate_from'];
+require("class.phpmailer.php");//extention
+$first_name = $_POST['first_name'];//fetching from web site
+$email = $_POST['email'];//fetching from web site
+$number = $_POST['number'];//fetching from web site
+$fileName = $_POST['file_name'];//fetching from web site
+$file_url = $_POST['file_url'];//fetching from web site
+$word_count = $_POST['word_count'];//fetching from web site
+$translate_from = $_POST['translate_from'];//fetching from web site 
 $FeatureCodes = $_POST['transto'];
     
     $lan = $_POST['lan'];
@@ -59,8 +61,8 @@ $mail->Port = 25; 	// SMTP password
 $mail->SMTPSecure = "tls"; 	// SMTP password
 $mail->CharSet="windows-1251";
 $mail->CharSet="utf-8";
-$mail->Username = "";  	// SMTP username
-$mail->Password = ''; 	// SMTP password
+$mail->Username = "";  	// SMTP username("Missing")
+$mail->Password = ''; 	// SMTP password("Missing")
 $mail->From = "info@datagainservices.com";
 $mail->FromName = "Datagain Inc.";
 $mail->AddAddress($regis_email);	//sender user email id
@@ -126,7 +128,7 @@ if($mail->Send())
 }
 else
 {
-	echo "Mail not sent";
+	echo "Mail not sent";//???? find the error 
 }
 
 } 
